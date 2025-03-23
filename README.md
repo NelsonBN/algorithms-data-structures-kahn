@@ -25,7 +25,9 @@ graph LR
   3((3)) --> 1
 ```
 
-[Kahn's Algorithm using Numbered Vertices](./src/01-kahn-using-numbered-vertices.py)
+[Kahn using Numbered Vertices](./src/01.1-kahn-using-numbered-vertices.py)
+**Vs.**
+[DFS using Numbered Vertices](./src/01.2-dfs-using-numbered-vertices.py)
 
 
 ### Using Labelled Vertices
@@ -42,7 +44,7 @@ graph LR
   F((F)) --> G
 ```
 
-[Kahn's Algorithm using Labelled Vertices](./src/02-kahn-using-labelled-vertices.py)
+[Kahn using Labelled Vertices](./src/02-kahn-using-labelled-vertices.py)
 
 
 
