@@ -47,4 +47,5 @@ graph LR
 
 
 ## References
+- [Topological Sorting with DFS](https://github.com/NelsonBN/algorithms-data-structures-topological-sorting-dfs)
 - [Other Algorithms & Data Structures](https://github.com/NelsonBN/algorithms-data-structures)
