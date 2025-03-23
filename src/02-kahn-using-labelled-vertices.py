@@ -35,6 +35,9 @@ def kahn(graph):
             if in_degree[v] == 0: # If a vertex has no more incoming edges, it can be processed as all its dependencies are satisfied
                 queue.append(v)
 
+    if len(topological_sort) != len(in_degree):
+        raise Exception("Graph contains at least one cycle - Topological sort is not possible")
+
     return topological_sort
 
 

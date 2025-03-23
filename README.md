@@ -25,7 +25,7 @@ graph LR
   3((3)) --> 1
 ```
 
-[Using Numbered Vertices](./src/01-kahn-using-numbered-vertices.py)
+[Implementation](./src/01-kahn-using-numbered-vertices.py)
 
 
 ### Using Labelled Vertices
@@ -42,7 +42,7 @@ graph LR
   F((F)) --> G
 ```
 
-[Using Labelled Vertices](./src/02-kahn-using-labelled-vertices.py)
+[Implementation](./src/02-kahn-using-labelled-vertices.py)
 
 
 

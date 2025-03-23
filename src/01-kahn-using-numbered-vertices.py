@@ -30,7 +30,7 @@ def kahn(graph):
                 queue.append(v)
 
     if len(topological_sort) != total_nodes:
-        raise Exception("Graph has at least one cycle - Topological sort not possible")
+        raise Exception("Graph contains at least one cycle - Topological sort is not possible")
 
     return topological_sort
 
