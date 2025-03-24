@@ -59,6 +59,29 @@ graph LR
 [Implementation](./src/02-kahn-using-labelled-vertices.py)
 
 
+### Detect if has more than one topological sorting
+
+```mermaid
+graph LR
+  A((A)) --> B
+  B((B)) --> C((C))
+```
+```mermaid
+graph LR
+  A((A)) --> B
+  A --> C
+
+  B((B)) --> C
+  B --> D((D))
+  B --> E
+
+  C((C)) --> E((E))
+  C --> F((F))
+```
+
+[Implementation](./src/03-kahn-detecting-multiple-topological-sorting.py)
+
+
 
 ## References
 - [Topological Sorting with DFS](https://github.com/NelsonBN/algorithms-data-structures-topological-sorting-dfs)

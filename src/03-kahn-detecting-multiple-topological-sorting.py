@@ -18,9 +18,12 @@ def kahn(graph):
             queue.append(u)
 
     topological_sorting = []
+    has_multiple_topological_sorting = False
 
     # Step 3: Process until queue is empty
     while queue: # O(V + E)
+        if has_multiple_topological_sorting == False and len(queue) > 1:
+            has_multiple_topological_sorting = True
         u = queue.popleft() # Remove node from queue (O(1))
         topological_sorting.append(u) # Add to topological order (O(1))
 
@@ -38,27 +41,24 @@ def kahn(graph):
     if len(topological_sorting) != len(in_degree):
         raise Exception("Graph contains at least one cycle - Topological sort is not possible")
 
-    return topological_sorting
+    return topological_sorting, has_multiple_topological_sorting
 
 
-dag = {
+graph1 = {
     'A': ['B'],
-    'B': ['C', 'D'],
-    'C': ['E'],
-    'D': ['E', 'F'],
-    'E': ['G'],
-    'F': ['G']
+    'B': ['C']
 }
 
-cycle = {
-    'A': ['B'],
-    'B': ['C'],
-    'C': ['A'],
-    'D': ['B', 'C'],
-    'E': ['C', 'D']
+graph2 = {
+    'A': ['B', 'C'],
+    'B': ['C', 'D', 'E'],
+    'C': ['E', 'F']
 }
 
-graph = dag
+graph = graph2
 
+topological_sorting, has_multiple_topological_sorting = kahn(graph)
 
-print(f'Topological Sorting: {kahn(graph)}')
+print(f'Topological Sorting: {topological_sorting}')
+if has_multiple_topological_sorting:
+    print("Graph has multiple topological sorting.")
