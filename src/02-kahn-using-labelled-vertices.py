@@ -41,7 +41,7 @@ def kahn(graph):
     return topological_sort
 
 
-graph = {
+dag = {
     'A': ['B'],
     'B': ['C', 'D'],
     'C': ['E'],
@@ -50,5 +50,15 @@ graph = {
     'F': ['G']
 }
 
+cycle = {
+    'A': ['B'],
+    'B': ['C'],
+    'C': ['A'],
+    'D': ['B', 'C'],
+    'E': ['C', 'D']
+}
 
-print(f'Topological Sort: {kahn(graph)}')
+dag = dag
+
+
+print(f'Topological Sort: {kahn(dag)}')

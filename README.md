@@ -4,10 +4,10 @@ The Kahn's algorithm is a method for **topological sorting** of a **directed acy
 
 
 ## Characteristics
-- Time complexity: O(V + E)
+- Time complexity: O(V + E) - Because the algorithm processes each vertex and edge exactly once.
   - V = number of vertices
   - E = number of edges
-- Space complexity: O(V + E)
+- Space complexity: O(V) - The algorithm use a list to store the in-degree of each vertex and a queue to store the vertices with in-degree 0.
 
 
 
@@ -30,6 +30,7 @@ graph LR
 
 ### Using Labelled Vertices
 
+**DAG**:
 ```mermaid
 graph LR
   A((A)) --> B((B))
@@ -40,6 +41,19 @@ graph LR
   D --> F
   E((E)) --> G((G))
   F((F)) --> G
+```
+**Cycle**:
+```mermaid
+graph LR
+  A((A)) --> B
+  B((B)) --> C
+  C((C)) --> A
+  D((D)) --> B
+  D --> C
+  E((E)) --> C
+  E --> D
+
+  linkStyle 0,1,2 stroke:#f00
 ```
 
 [Implementation](./src/02-kahn-using-labelled-vertices.py)
