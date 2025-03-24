@@ -58,7 +58,7 @@ cycle = {
     'E': ['C', 'D']
 }
 
-dag = dag
+graph = dag
 
 
-print(f'Topological Sort: {kahn(dag)}')
+print(f'Topological Sort: {kahn(graph)}')
